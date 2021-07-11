@@ -1,25 +1,15 @@
 import React from "react";
-import './Header.scss';
-// import { ReactComponent as Logo } from '../../assets/logo.png';
 import LogoSmall from "../../assets/logo-small.png";
 import Logo from "../../assets/logo.png";
 import Profile from '../../assets/Profile/Profile.png';
 import Logout from '../../assets/logout/logout.png';
-// import { AiOutlineUser } from "react-icons/ai";
 import {
   Container,
-  Nav,
-  Navbar,
-  NavbarBrand,
-  NavbarText,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownMenu,
-  DropdownItem,
   Row,
   Col,
 } from "reactstrap";
+
+import './Header.scss';
 
 const Header = () => {
   return (
@@ -27,9 +17,9 @@ const Header = () => {
       <Row className="header-content">
         <Col>
           <Row className="logo-section">
-            <Col><img src={Logo} className="logo" /></Col>
+            <Col><img src={Logo} alt="" className="logo" /></Col>
             <Col className="poweredby">powered by</Col>
-            <Col className="navbar"><img src={LogoSmall} className="small-logo" /></Col>
+            <Col className="navbar"><img src={LogoSmall} alt="" className="small-logo" /></Col>
           </Row>
         </Col>
         <Col>
@@ -38,18 +28,11 @@ const Header = () => {
               <Row className="username">Username</Row>
               <Row className="company">Company Name</Row>
             </Col>
-            <Col><img src={Profile} /></Col>
-            <Col className="logout-icon"><img src={Logout} /></Col>
+            <Col><img src={Profile} alt="" /></Col>
+            <Col className="logout-icon"><img src={Logout} alt="" /></Col>
           </Row>
         </Col>
       </Row>
-      {/* <NavbarBrand className="navbar" href="/">
-            <img src={Logo} className="logo" />
-          </NavbarBrand>
-          <NavbarBrand className="poweredby" >powered by </NavbarBrand>
-          <NavbarBrand className="navbar" href="/">
-            <img src={LogoSmall} className="small-logo" />
-          </NavbarBrand> */}
     </Container>
 
   );

@@ -95,7 +95,7 @@ function Dashboard() {
     setEndDate(ranges.endDate);
   };
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -123,137 +123,137 @@ function Dashboard() {
               <CardBody><DateRangeFilter onChange={onChange} /></CardBody>
             </Card>
           </Collapse>
-        <Row className="market-line">
-          <Col>
-            <p className="market-text">MARKET INSIGHT</p>
-          </Col>
-          <Col>
-            <Row className="hint-group" >
-              <Col className="hint-icon"><img src={Hint} alt="" /></Col>
-              <Col className="hint-text"><a className="link" href="/">Click here for help</a></Col>
-              <Col className="up-icon"><FaChevronUp /></Col>
-            </Row>
-          </Col>
-        </Row>
-        <Row className="sales-turnover-group">
-          <Col>
-            <Row className="sales-turnover-title-group">
-              <Col className="sales-turnover-text">Sales Turnover</Col>
-              <Col className="dot-icon"><FaEllipsisV /></Col>
-            </Row>
-            <Row className="sales-turnover-content-group">
-              <Col className="sales-turnover-nominal">
-                <Row>RP. 3,600,000</Row>
-                <Row className="sales-turnover-detail"><img src={DownArrow} alt="" /> 13.8% last period in products sold</Row>
-              </Col>
-              <Col><img src={Chart} alt="" /></Col>
-            </Row>
-          </Col>
-        </Row>
-        <Row className="main-group">
-          <Col xl="6" className="chart-group">
-            <Row className="title-chart-group">
-              <Col className="title">AVERAGE PURCHASE VALUE</Col>
-              <Col>
-                <Row className="date-group">
-                  <Col className="date-chart-box"><p className="date-chart-text">Last 6 months&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FaChevronDown className="down-arrow-icon" xl="2" /></p></Col>
-                  <Col className="dot-icon"><FaEllipsisV /></Col>
-                </Row>
-              </Col>
-            </Row>
-            <Row className="first-item-group">
-              <Bar data={data} options={config} />
-            </Row>
-          </Col>
-          <Col xl="6">
-            <Row className="detail-group">
-              <Col className="best-seller-group">
-                <Row className="title-group">
-                  <Col className="title">Best Selling SKU</Col>
-                  <Col className="dot-icon"><FaEllipsisV /></Col>
-                </Row>
-                <Row className="first-item-group">
-                  <Col><img src={BestProduct} alt="" /></Col>
-                  <Col className="detail-product">
-                    <Row>
-                      <Col>
-                        <Row className="product-name">[Nama Produk]</Row>
-                        <Row className="product-detail">
-                          <Col>Rp. XXX</Col>
-                          <Col>[jml terjual]</Col>
-                        </Row>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
-                {
-                  [...Array(n)].map((elementInArray, index) => (
-                    <div key={index}>
-                      <Row className="list-item-group">
-                        <Col><img src={ListProduct} alt="" /></Col>
-                        <Col className="detail-product">
-                          <Row>
-                            <Col>
-                              <Row className="product-name">[Nama Produk]</Row>
-                              <Row className="product-detail">
-                                <Col>Rp. XXX</Col>
-                                <Col>[jml terjual]</Col>
-                              </Row>
-                            </Col>
+          <Row className="market-line">
+            <Col>
+              <p className="market-text">MARKET INSIGHT</p>
+            </Col>
+            <Col>
+              <Row className="hint-group" >
+                <Col className="hint-icon"><img src={Hint} alt="" /></Col>
+                <Col className="hint-text"><a className="link" href="/">Click here for help</a></Col>
+                <Col className="up-icon"><FaChevronUp /></Col>
+              </Row>
+            </Col>
+          </Row>
+          <Row className="sales-turnover-group">
+            <Col>
+              <Row className="sales-turnover-title-group">
+                <Col className="sales-turnover-text">Sales Turnover</Col>
+                <Col className="dot-icon"><FaEllipsisV /></Col>
+              </Row>
+              <Row className="sales-turnover-content-group">
+                <Col className="sales-turnover-nominal">
+                  <Row>RP. 3,600,000</Row>
+                  <Row className="sales-turnover-detail"><img src={DownArrow} alt="" /> 13.8% last period in products sold</Row>
+                </Col>
+                <Col><img src={Chart} alt="" /></Col>
+              </Row>
+            </Col>
+          </Row>
+          <Row className="main-group">
+            <Col xl="6" className="chart-group">
+              <Row className="title-chart-group">
+                <Col className="title">AVERAGE PURCHASE VALUE</Col>
+                <Col>
+                  <Row className="date-group">
+                    <Col className="date-chart-box"><p className="date-chart-text">Last 6 months&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FaChevronDown className="down-arrow-icon" xl="2" /></p></Col>
+                    <Col className="dot-icon"><FaEllipsisV /></Col>
+                  </Row>
+                </Col>
+              </Row>
+              <Row className="first-item-group">
+                <Bar data={data} options={config} />
+              </Row>
+            </Col>
+            <Col xl="6">
+              <Row className="detail-group">
+                <Col className="best-seller-group">
+                  <Row className="title-group">
+                    <Col className="title">Best Selling SKU</Col>
+                    <Col className="dot-icon"><FaEllipsisV /></Col>
+                  </Row>
+                  <Row className="first-item-group">
+                    <Col><img src={BestProduct} alt="" /></Col>
+                    <Col className="detail-product">
+                      <Row>
+                        <Col>
+                          <Row className="product-name">[Nama Produk]</Row>
+                          <Row className="product-detail">
+                            <Col>Rp. XXX</Col>
+                            <Col>[jml terjual]</Col>
                           </Row>
                         </Col>
                       </Row>
-                    </div>
-                  )
-                  )
-                }
-              </Col>
-              <Col className="top-competitor-group">
-                <Row className="title-group">
-                  <Col className="title">Top Competitor SKU</Col>
-                  <Col className="dot-icon"><FaEllipsisV /></Col>
-                </Row>
-                <Row className="first-item-group">
-                  <Col><img src={BestProduct} alt="" /></Col>
-                  <Col className="detail-product">
-                    <Row>
-                      <Col>
-                        <Row className="product-name">[Nama Produk]</Row>
-                        <Row className="product-detail">
-                          <Col>Rp. XXX</Col>
-                          <Col>[jml terjual]</Col>
+                    </Col>
+                  </Row>
+                  {
+                    [...Array(n)].map((elementInArray, index) => (
+                      <div key={index}>
+                        <Row className="list-item-group">
+                          <Col><img src={ListProduct} alt="" /></Col>
+                          <Col className="detail-product">
+                            <Row>
+                              <Col>
+                                <Row className="product-name">[Nama Produk]</Row>
+                                <Row className="product-detail">
+                                  <Col>Rp. XXX</Col>
+                                  <Col>[jml terjual]</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                          </Col>
                         </Row>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Row>
-                {
-                  [...Array(n)].map((elementInArray, index) => (
-                    <div key={index}>
-                      <Row className="list-item-group">
-                        <Col><img src={ListProduct} alt="" /></Col>
-                        <Col className="detail-product">
-                          <Row>
-                            <Col>
-                              <Row className="product-name">[Nama Produk]</Row>
-                              <Row className="product-detail">
-                                <Col>Rp. XXX</Col>
-                                <Col>[jml terjual]</Col>
-                              </Row>
-                            </Col>
+                      </div>
+                    )
+                    )
+                  }
+                </Col>
+                <Col className="top-competitor-group">
+                  <Row className="title-group">
+                    <Col className="title">Top Competitor SKU</Col>
+                    <Col className="dot-icon"><FaEllipsisV /></Col>
+                  </Row>
+                  <Row className="first-item-group">
+                    <Col><img src={BestProduct} alt="" /></Col>
+                    <Col className="detail-product">
+                      <Row>
+                        <Col>
+                          <Row className="product-name">[Nama Produk]</Row>
+                          <Row className="product-detail">
+                            <Col>Rp. XXX</Col>
+                            <Col>[jml terjual]</Col>
                           </Row>
                         </Col>
                       </Row>
-                    </div>
-                  )
-                  )
-                }
-              </Col>
-            </Row>
-          </Col>
-        </Row>
+                    </Col>
+                  </Row>
+                  {
+                    [...Array(n)].map((elementInArray, index) => (
+                      <div key={index}>
+                        <Row className="list-item-group">
+                          <Col><img src={ListProduct} alt="" /></Col>
+                          <Col className="detail-product">
+                            <Row>
+                              <Col>
+                                <Row className="product-name">[Nama Produk]</Row>
+                                <Row className="product-detail">
+                                  <Col>Rp. XXX</Col>
+                                  <Col>[jml terjual]</Col>
+                                </Row>
+                              </Col>
+                            </Row>
+                          </Col>
+                        </Row>
+                      </div>
+                    )
+                    )
+                  }
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </div>
       </div>
-    </div>
     </>
   );
 }
